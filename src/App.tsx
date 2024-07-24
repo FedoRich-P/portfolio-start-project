@@ -6,6 +6,7 @@ import { Header } from './layout/main/Header';
 import { FlexWrapper } from './components/flex/FlexWrapper';
 import { Plans } from './layout/main/plans/Plans';
 import { Recom } from './layout/main/recommendations/RecomWrapper';
+import { Nav } from './layout/nav/Nav';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Plans />
         <Recom />
       </MainSection>
+      <Nav />
     </FlexWrapper>
   );
 }
