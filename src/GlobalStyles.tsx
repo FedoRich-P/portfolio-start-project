@@ -12,6 +12,15 @@ export const GlobalStyled = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: transparent ;
+  border-color: transparent;
+
+
   }
 
   ol, ul, li {
@@ -22,5 +31,11 @@ export const GlobalStyled = createGlobalStyle`
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  section {
+    margin-bottom: 70px;
+    text-align: center;
+    outline: 1px solid blue;
   }
 `;

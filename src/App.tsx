@@ -1,24 +1,26 @@
 import './App.css';
 import { Sitebar } from './layout/sitebar/Sitebar';
 import styled from 'styled-components';
-import { Main } from './layout/main/Main';
-import { Services } from './layout/sections/services/Services';
+import { Services } from './layout/main/services/Services';
+import { Header } from './layout/main/Header';
+import { FlexWrapper } from './components/flex/FlexWrapper';
+import { Plans } from './layout/main/plans/Plans';
+import { Recom } from './layout/main/recommendations/RecomWrapper';
 
 function App() {
   return (
-    <div className="App">
+    <FlexWrapper $align="fles-start" $wrap="wrap">
+      <Sitebar />
       <MainSection>
-        <Sitebar />
-        <Main />
+        <Header />
+        <Services />
+        <Plans />
+        <Recom />
       </MainSection>
-      <Services />
-    </div>
+    </FlexWrapper>
   );
 }
 
 export default App;
 
-const MainSection = styled.section`
-  max-width: 1440px;
-  display: flex;
-`;
+const MainSection = styled.main``;

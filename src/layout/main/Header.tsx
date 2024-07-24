@@ -5,40 +5,43 @@ import { FlexWrapper } from '../../components/flex/FlexWrapper';
 import { MainBtn } from '../../components/buttons/MainBtn';
 import ButtonIcon from '../../assets/icons/mainBtn.svg';
 import { myTheme } from '../../components/theme/Theme.staled';
-import MainImg from '../../assets/images/mainPhoto.png';
+import HeaderImg from '../../assets/images/mainPhoto.png';
+import HeaderBG from '../../assets/icons/header.svg';
 
-export function Main() {
+export function Header() {
   return (
-    <Container as={MainWrapper}>
-      <FlexWrapper $direction="column" $align="flex-start">
-        <MainSuPTitle>I’m Rayan Adlrdard</MainSuPTitle>
-        <MainTitle>
-          <span>Front-end</span> Developer{' '}
-        </MainTitle>
-        <MainText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
-          feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
-          lectus.
-        </MainText>
-        <MainBtn as={MainLink}>HIRE ME</MainBtn>
-      </FlexWrapper>
-      <MainPhoto src={MainImg} alt="Main Photo"></MainPhoto>
-    </Container>
+    <HeaderWrapper>
+      <Container as={FlexWrapper}>
+        <HeaderDescr>
+          <HeaderSuPTitle>I’m Rayan Adlrdard</HeaderSuPTitle>
+          <HeaderTitle>
+            <span>Front-end</span> Developer{' '}
+          </HeaderTitle>
+          <HeaderText>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+            volutpat feugiat placerat lobortis. Natoque rutrum semper sed
+            suspendisse nunc lectus.
+          </HeaderText>
+          <MainBtn as={HeaderLink}>HIRE ME</MainBtn>
+        </HeaderDescr>
+        <HeaderPhoto src={HeaderImg} alt="Header Photo"></HeaderPhoto>
+      </Container>
+    </HeaderWrapper>
   );
 }
 
-const MainWrapper = styled.main`
+const HeaderWrapper = styled.section`
   margin-bottom: 137px;
-  display: flex;
-  align-items: flex-start;
-  column-gap: 27px;
-  flex-wrap: wrap;
-  padding-top: 93px;
-  padding-left: 60px;
-  /* padding: 93px 60px 74px; */
-  height: 30%;
+  padding: 0px 60px 74px;
+  background-image: url(${HeaderBG});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
-const MainTitle = styled.h1`
+const HeaderDescr = styled.div`
+  max-width: 500px;
+`;
+
+const HeaderTitle = styled.h1`
   margin-bottom: 18px;
   font-family: Inter;
   font-size: 48px;
@@ -50,7 +53,7 @@ const MainTitle = styled.h1`
     color: ${myTheme.colors.main};
   }
 `;
-const MainSuPTitle = styled.h2`
+const HeaderSuPTitle = styled.h2`
   font-family: Inter;
   font-size: 48px;
   font-weight: 700;
@@ -58,7 +61,7 @@ const MainSuPTitle = styled.h2`
   color: ${myTheme.colors.black};
 `;
 
-const MainText = styled.p`
+const HeaderText = styled.p`
   display: inline-block;
   margin-bottom: 25px;
   max-width: 424px;
@@ -68,7 +71,9 @@ const MainText = styled.p`
   line-height: 24px;
   color: ${myTheme.colors.grey};
 `;
-const MainLink = styled.a`
+const HeaderLink = styled.a`
+  padding: 16px 32px;
+  display: inline-block;
   position: relative;
   min-width: 154px;
   &::after {
@@ -83,9 +88,8 @@ const MainLink = styled.a`
   }
 `;
 
-const MainPhoto = styled.img`
+const HeaderPhoto = styled.img`
   width: 325px;
   height: 460px;
   object-fit: contain;
-  transform: translateY(-93px);
 `;

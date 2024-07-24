@@ -14,4 +14,5 @@ export const SectionSubTitle = styled.h3<SectionSubTitlePropsType>`
   font-weight: 500;
   line-height: 22.25px;
   color: ${myTheme.colors.black};
+  text-transform: capitalize;
 `;

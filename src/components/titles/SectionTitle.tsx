@@ -15,4 +15,5 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
   line-height: 39.55px;
   color: ${myTheme.colors.black};
   text-align: center;
+  text-transform: capitalize;
 `;
