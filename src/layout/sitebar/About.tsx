@@ -3,14 +3,14 @@ import { myTheme } from '../../components/theme/Theme.staled';
 import { FlexWrapper } from '../../components/flex/FlexWrapper';
 
 type AboutPropsType = {
-  name: string;
+  title: string;
   value: string;
 };
 
 export function About(props: AboutPropsType) {
   return (
     <FlexWrapper as={AboutBox} $justify="space-between">
-      <AboutName>{props.name}</AboutName>
+      <AboutName>{props.title}</AboutName>
       <AboutValue>{props.value}</AboutValue>
     </FlexWrapper>
   );

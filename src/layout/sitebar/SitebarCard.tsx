@@ -17,7 +17,7 @@ export function SitebarCard() {
   return (
     <SidebarWrapper>
       <ImageBox>
-        <Image src={Src}></Image>
+        <Image src={Src} alt="My Photo"></Image>
       </ImageBox>
       <Name>Rayan Adlardard</Name>
       <CardText>Font-end Developer</CardText>

@@ -6,7 +6,7 @@ type SectionTitlePropsType = {
   $width?: string;
 };
 
-export const SectionTitle = styled.h3<SectionTitlePropsType>`
+export const SectionTitle = styled.h2<SectionTitlePropsType>`
   margin-bottom: ${(props) => props.$mb || '15px'};
   width: ${(props) => props.$width || '100%'};
   font-family: Inter;

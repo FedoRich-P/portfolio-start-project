@@ -17,6 +17,20 @@ const AboutList = {
   Address: 'Dhaka, Bangladesh',
 };
 
+const AboutLanguages = {
+  Bangla: '100%',
+  English: '80%',
+  Spanish: '60%',
+};
+
+const AboutSkills = {
+  Html: '90%',
+  CSS: '85%',
+  Js: '80%',
+  PHP: '75%',
+  WordPress: '85%',
+};
+
 export function Sitebar() {
   return (
     <>
@@ -24,22 +38,20 @@ export function Sitebar() {
         <SitebarCard></SitebarCard>
         <SitebarWrapper>
           {Object.entries(AboutList).map((el, i) => {
-            return <About name={el[0]} value={el[1]} key={i}></About>;
+            return <About title={el[0]} value={el[1]} key={i}></About>;
           })}
         </SitebarWrapper>
         <SectionSubTitle>Languages </SectionSubTitle>
         <SitebarWrapper>
-          <Progress title="Bangla" value="100%"></Progress>
-          <Progress title="English" value="80% "></Progress>
-          <Progress title="Spanish" value="60% "></Progress>
+          {Object.entries(AboutLanguages).map((el, i) => {
+            return <Progress title={el[0]} value={el[1]} key={i}></Progress>;
+          })}
         </SitebarWrapper>
         <SectionSubTitle>Skills </SectionSubTitle>
         <SitebarWrapper>
-          <Progress title="Html" value="90%"></Progress>
-          <Progress title="CSS" value="85%"></Progress>
-          <Progress title="Js" value="80%"></Progress>
-          <Progress title="PHP" value="75%"></Progress>
-          <Progress title="WordPress" value="85%"></Progress>
+          {Object.entries(AboutSkills).map((el, i) => {
+            return <Progress title={el[0]} value={el[1]} key={i}></Progress>;
+          })}
         </SitebarWrapper>
         <SectionSubTitle>Extra Skills</SectionSubTitle>
         <SitebarWrapper>
